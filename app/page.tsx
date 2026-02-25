@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { use } from 'react'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Sidebar, MobileNav } from '@/components/navigation'
@@ -87,12 +86,7 @@ function HeroBackground() {
   )
 }
 
-type HomeProps = {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export default function Home(props: HomeProps) {
-  use(props?.searchParams ?? Promise.resolve({}))
+export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Sidebar />

@@ -1,6 +1,6 @@
 'use client'
 
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Sidebar, MobileNav } from '@/components/navigation'
 import { Footer } from '@/components/footer'
@@ -152,12 +152,7 @@ const itemVariants = {
   animate: { opacity: 1, y: 0 },
 }
 
-type WorkoutsPageProps = {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export default function WorkoutsPage(props: WorkoutsPageProps) {
-  use(props?.searchParams ?? Promise.resolve({}))
+export default function WorkoutsPage() {
   const [selectedLevel, setSelectedLevel] = useState('Beginner')
   const [selectedWorkout, setSelectedWorkout] = useState<any>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)

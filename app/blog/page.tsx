@@ -1,6 +1,5 @@
 'use client'
 
-import { use } from 'react'
 import { motion } from 'framer-motion'
 import { Sidebar, MobileNav } from '@/components/navigation'
 import { Footer } from '@/components/footer'
@@ -91,12 +90,7 @@ const itemVariants = {
   animate: { opacity: 1, y: 0 },
 }
 
-type BlogPageProps = {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export default function BlogPage(props: BlogPageProps) {
-  use(props?.searchParams ?? Promise.resolve({}))
+export default function BlogPage() {
   return (
     <div className="min-h-screen bg-background">
       <Sidebar />

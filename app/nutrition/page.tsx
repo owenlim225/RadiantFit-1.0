@@ -1,6 +1,6 @@
 'use client'
 
-import { use, useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Sidebar, MobileNav } from '@/components/navigation'
 import { Footer } from '@/components/footer'
@@ -187,12 +187,7 @@ function NutritionAccordion({ plan }: { plan: (typeof nutritionPlans)[0] }) {
   )
 }
 
-type NutritionPageProps = {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export default function NutritionPage(props: NutritionPageProps) {
-  use(props?.searchParams ?? Promise.resolve({}))
+export default function NutritionPage() {
   const [selectedPlan, setSelectedPlan] = useState(0)
 
   return (

@@ -1,6 +1,5 @@
 'use client'
 
-import { use } from 'react'
 import { motion } from 'framer-motion'
 import { Sidebar, MobileNav } from '@/components/navigation'
 import { Footer } from '@/components/footer'
@@ -74,12 +73,7 @@ const itemVariants = {
   animate: { opacity: 1, y: 0 },
 }
 
-type ProgressPageProps = {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-export default function ProgressPage(props: ProgressPageProps) {
-  use(props?.searchParams ?? Promise.resolve({}))
+export default function ProgressPage() {
   return (
     <div className="min-h-screen bg-background">
       <Sidebar />
