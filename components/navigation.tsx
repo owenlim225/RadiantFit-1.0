@@ -21,8 +21,12 @@ export function Sidebar() {
     <aside className="hidden md:flex flex-col fixed left-0 top-0 h-screen w-64 bg-card border-r border-border p-6 z-50">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-3 mb-12">
-        <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-xl text-primary-foreground">
-          RF
+        <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-primary/10">
+          <img
+            src="/logo.png"
+            alt="RadiantFit"
+            className="w-full h-full object-contain"
+          />
         </div>
         <div>
           <h1 className="font-bold text-lg text-foreground">Radiant</h1>
