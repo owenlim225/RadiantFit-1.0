@@ -227,5 +227,3 @@ This project is created as a professional fitness platform reference implementat
 For questions or issues, please refer to the documentation or open an issue in the repository.
 
 ---
-
-**Train Hard. Stay Disciplined.** - Results Over Excuses
